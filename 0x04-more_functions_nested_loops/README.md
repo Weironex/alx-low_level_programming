@@ -13,4 +13,5 @@ What are the <code>gcc</code> flags <code> -Wall -Werror -pedantic -Wextra -std=
 What are header files and how to to use them with <code>#include</code>
 
 
-
+|Filename|Description|
+|<code>0-isuper.c</code>|Checks for uppercase character|
