@@ -6,10 +6,10 @@
  * @dest: A buffer to copy the string to.
  * @src: The source string to copy.
  *
- * Return: A pointer to the destination string @dest.
+ * Return: A pointer to the destination string @dest
  */
 
-char *_strcpy(char *dest, const char *src)
+char *_strcpy(char *dest, char *src)
 {
 	int i = 0;
 
