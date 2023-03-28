@@ -7,7 +7,7 @@
  * @dest: destination array
  * @src: source array
  *
- * Return: Copied string
+ * Return: Pointer to dest
  */
 
 char *_strcpy(char *dest, char *src)
