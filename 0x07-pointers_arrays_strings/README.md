@@ -19,4 +19,4 @@ What are the most common C standard library functions to manipulate strings
 |`7-print_chessboard.c`|`void print_chessboard(char (*a)[8])`|Prints the chessboard|
 |`8-print_diagsums.c`|`void print_diagsums(int *a, int size)`|Prints the sum of the two diagonals of a square matrix of integers|
 |`100-set_string.c`|`void set_string(char **s, char *to)`|Sets the value of a pointer to a char|
-|`101-crackme_password`|``|Contains the password for the crackme2 executable|
+|`101-crackme_password`||Contains the password for the crackme2 executable|
