@@ -18,5 +18,5 @@ unsigned int _strspn(char *s, char *accept)
 		c++;
 		s++;
 	}
-	return c++;
+	return (c);
 }
