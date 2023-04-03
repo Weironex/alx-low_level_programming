@@ -3,15 +3,15 @@
 #include <string.h>
 
 /**
- * _strstr - Finds the first occurrence of the substring @needle in the string
- *		@haystack. The terminating null bytes (\0) are not compared.
- * @needle: The substring to be located.
- * @haystack: The string to be searched.
- *
- * Return: Always 0
+ * _strstr - Locates a substring.
+ * @haystack: input
+ * @needle: pointer to char
+ 
+ * Return: Null
  */
 
 char *_strstr(char *haystack, char *needle)
+
 {
 	int i;
 	int j;
