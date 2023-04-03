@@ -6,7 +6,7 @@
  * _strstr - Locates a substring.
  * @haystack: input
  * @needle: pointer to char
- 
+ *
  * Return: Null
  */
 
