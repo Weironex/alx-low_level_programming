@@ -4,18 +4,19 @@
 /**
  * print_diagsums - Prints the sum of the two diagonals of a square
  *			matrix of integers.
- * @a: A pointer
- * @size: size
+ * @a: Parameter function.
+ * @size: size of the matrix
  *
  * Return: Always 0
  */
 
 void print_diagsums(int *a, int size)
 {
+	int i;
 	int sum1 = 0;
 	int sum2 = 0;
 
-	for (int i = 0; i < size; i++)
+	for (i = 0; i < size; i++)
 	{
 		sum1 += *(a + i * size + i);
 		sum2 += *(a + i * size + (size - i - 1));
