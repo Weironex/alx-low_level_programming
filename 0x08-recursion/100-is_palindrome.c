@@ -2,30 +2,52 @@
 #include <string.h>
 
 /**
- * is_palindrome - Returns 1 if a string is a palindrome and 0 if not.
- * @s: Paremeter function
+ * _strlen_recursion - size.
+ * @s: String
  *
  * Return: 1 if a string is a palindrome and 0 if not.
  */
 
 int is_palindrome(char *s)
 {
-	int len = strlen(s);
+	if (!*s)
+	{
+		return (0);
+	}
+	return (1 + _strlen_recursion(++s));
+}
 
-	if (len <= 1)
+/**
+ * p - palindrome
+ * @s: String
+ * @l: Parameter function
+ *
+ * Return: 1 if a string is a palindrome and 0 if not.
+ */
+
+int p(char *s, int l)
+{
+	if (l < 1)
 	{
 		return (1);
 	}
 
-	if (s[0] != s[len - 1])
+	if (*s == *(s + l))
 	{
-		return (0);
+		return (p(s + 1, l - 2));
 	}
 
-	else
-	{
-		s[len - 1] = '\0';
-		return (is_palindrome(&s[1]));
-	}
+	return (0);
+}
 
+/**
+ * is_palindrome - Returns 1 if a string is a palindrome and 0 if not.
+ * @s: String
+ * Return: 1 if a string is a palindrome and 0 if not.
+ */
+int is_palindrome(char *s)
+{
+	int len = _strlen_recursion(s);
+
+	return (p(s, len - 1));
 }
