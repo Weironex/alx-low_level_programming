@@ -8,7 +8,7 @@
  * Return: 1 if a string is a palindrome and 0 if not.
  */
 
-int is_palindrome(char *s)
+int _strlen_recursion(char *s)
 {
 	if (!*s)
 	{
@@ -45,6 +45,7 @@ int p(char *s, int l)
  * @s: String
  * Return: 1 if a string is a palindrome and 0 if not.
  */
+
 int is_palindrome(char *s)
 {
 	int len = _strlen_recursion(s);
