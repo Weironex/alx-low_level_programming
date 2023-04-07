@@ -2,8 +2,7 @@
 int num_prime(int n, int i);
 
 /**
- * is_prime_number - Returns 1 if the input integer is a prime number,
- *			otherwise return 0.
+ * num_prime - number is  prime?
  * @n: Parameter function
  * @i: Parameter function
  *
@@ -28,10 +27,11 @@ int num_prime(int n, int i)
 }
 
 /**
- * is_prime_number - number is prime?
+ * is_prime_number - Returns 1 if the input integer is a prime number,
+ *			otherwise return 0.
  * @n: Parameter funtion
  *
- * Return: recursion
+ * Return: 1 if the input integer is a prime number, otherwise return 0.
  */
 
 int is_prime_number(int n)
