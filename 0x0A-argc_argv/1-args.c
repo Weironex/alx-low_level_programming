@@ -2,12 +2,13 @@
 
 /**
  * main - Prints the number of arguments passed into it.
- * @argc: n args
- * @argv: arr args
- * Return: 0
+ * @argc: Number of arguments.
+ * @argv: Array of arguments.
+ *
+ * Return: Always 0.
  */
 
-int main(int argc, char **argv)
+int main(int argc, char *argv[])
 
 {
 	(void)argv;
