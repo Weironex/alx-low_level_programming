@@ -1,11 +1,10 @@
-#include <stdio.h>
+#include <stdio.h.>
 
 /**
  * main - Prints the number of arguments passed into it.
- * @argc: Number of arguments
- * @argv: Array of arguments
- *
- * Return: Always 0
+ * @argc: n args
+ * @argv: arr args
+ * Return: 0
  */
 
 int main(int argc, char **argv)
@@ -13,9 +12,7 @@ int main(int argc, char **argv)
 {
 	(void)argv;
 
-	int num_of_args = argc - 1;
-
-	printf("%d\n", num_of_args);
+	printf("%d\n", argc - 1);
 
 	return (0);
 
