@@ -1,7 +1,11 @@
 #include "main.h"
 
 /**
+<<<<<<< HEAD
  * wildcmp - Compares two strings and returns 1 if the strings can be 
+=======
+ * wildcmp - Compares two strings and returns 1 if the strings can be
+>>>>>>> 4085e9c77a50a0d1c32cc8fa2d0e31d6ab031e94
  *		considered identical, otherwise return 0.
  * @s1: Parameter function
  * @s2: Parameter function
