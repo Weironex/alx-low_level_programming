@@ -11,10 +11,12 @@
 int main(int argc, char **argv)
 
 {
-	(void)argc;
+	(void)argv;
 
-	printf("%s\n", argv[0]);
+	int num_of_args = argc - 1;
+
+	printf("%d\n", num_of_args);
 
 	return (0);
-}
 
+}
