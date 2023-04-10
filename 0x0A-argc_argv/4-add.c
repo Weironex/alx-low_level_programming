@@ -24,12 +24,12 @@ int main(int argc, char *argv[])
 
 	for (i = 1; i < argc; i++)
 	{
-		cahr *arg = arv[i];
+		char *arg = argv[i];
 		int j;
 
 		for (j = 0; arg[j]; j++)
 		{
-			if (!isdigit(aarg[j]))
+			if (!isdigit(arg[j]))
 			{
 				printf("Error\n");
 
