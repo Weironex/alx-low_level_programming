@@ -55,6 +55,7 @@ int _atoi(char *s)
 void print_error(void)
 {
 	printf("Error\n");
+
 	exit(98);
 }
 
