@@ -38,16 +38,16 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 
 	if (new_ptr == NULL)
 		exit(98);
-	
+
 	if (new_size < old_size)
 		old_size = new_size;
-	
+
 	p = (char *) ptr;
 	q = (char *) new_ptr;
-	
+
 	for (i = 0; i < old_size; i++)
 		q[i] = p[i];
-	
+
 	free(ptr);
 
 	return (new_ptr);
