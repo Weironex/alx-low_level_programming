@@ -11,25 +11,36 @@
  * Return: Pointer to new dog, or NULL if function fails.
  */
 
-typedef struct dog
-{
-    char *name;
-    float age;
-    char *owner;
-} dog_t;
-
 dog_t *new_dog(char *name, float age, char *owner)
 {
-    dog_t *dog = malloc(sizeof(dog_t));
-    if (dog == NULL) {
+    dog_t *new_dog;
+    char *name_cpy;
+    char *owner_cpy;
+
+    new_dog = malloc(sizeof(dog_t));
+    if (new_dog == NULL)
+        return (NULL);
+
+    name_cpy = malloc(sizeof(char) * (strlen(name) + 1));
+    if (name_cpy == NULL)
+    {
+        free(new_dog);
         return (NULL);
     }
-    dog->name = strdup(name);
-    dog->age = age;
-    dog->owner = strdup(owner);
-    if (dog->name == NULL || dog->owner == NULL) {
-        free(dog);
+    strcpy(name_cpy, name);
+
+    owner_cpy = malloc(sizeof(char) * (strlen(owner) + 1));
+    if (owner_cpy == NULL)
+    {
+        free(new_dog);
+        free(name_cpy);
         return (NULL);
     }
-    return (dog);
+    strcpy(owner_cpy, owner);
+
+    new_dog->name = name_cpy;
+    new_dog->age = age;
+    new_dog->owner = owner_cpy;
+
+    return (new_dog);
 }
