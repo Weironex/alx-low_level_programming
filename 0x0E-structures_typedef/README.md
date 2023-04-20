@@ -8,7 +8,7 @@ General
 ---
 What are structures, when, why and how to use them
 How to use `typedef`
----
+
 File Name and Description
 ---
 |File Name|Prototype|Description|
