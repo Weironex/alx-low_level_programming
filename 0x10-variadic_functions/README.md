@@ -12,4 +12,4 @@ File Name, Prototype, And Description
 ---
 |File Name|Prototype|Description|
 |---|---|---|
-|'0-sum_them_all.c'|`int sum_them_all(const unsigned int n, ...)`|Returns the sum of all its parameters|
+|`0-sum_them_all.c`|`int sum_them_all(const unsigned int n, ...)`|Returns the sum of all its parameters|
