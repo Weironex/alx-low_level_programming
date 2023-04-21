@@ -54,8 +54,10 @@ void print_all(const char * const format, ...)
 	int i = 0, j = 0;
 	const char *fmt_spec = "cifs";
 
-	/* Define a function pointer table to map
-	format specifiers to print functions */
+	/**
+	* Define a function pointer table to map
+	* format specifiers to print functions
+	*/
 	void (*print_funcs[])(va_list) = {print_char, print_int,
 					  print_float, print_string};
 
