@@ -38,13 +38,10 @@ void print_all(const char * const format, ...)
 		{'s', print_string},
 		{'\0', NULL}
 	};
-
 	va_start(args, format);
-
 	while (format && format[i])
 	{
 		j = 0;
-
 		while (fmt[j].type)
 		{
 			if (fmt[j].type == format[i])
@@ -54,15 +51,11 @@ void print_all(const char * const format, ...)
 				separator = ", ";
 				break;
 			}
-
 			j++;
 		}
-
 		i++;
 	}
-
 	printf("\n");
-
 	va_end(args);
 }
 
