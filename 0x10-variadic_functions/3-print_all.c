@@ -26,7 +26,8 @@ void print_all(const char * const format, ...)
 	int i = 0, j = 0;
 	char *separator = "";
 
-	struct fmt_type {
+	struct fmt_type
+	{
 		char type;
 		void (*func)(va_list args);
 	};
@@ -66,6 +67,7 @@ void print_all(const char * const format, ...)
 void print_char(va_list args)
 {
 	char cval = va_arg(args, int);
+
 	printf("%c", cval);
 }
 
@@ -76,6 +78,7 @@ void print_char(va_list args)
 void print_int(va_list args)
 {
 	int ival = va_arg(args, int);
+
 	printf("%d", ival);
 }
 
@@ -86,6 +89,7 @@ void print_int(va_list args)
 void print_float(va_list args)
 {
 	double dval = va_arg(args, double);
+
 	printf("%f", dval);
 }
 
@@ -96,6 +100,7 @@ void print_float(va_list args)
 void print_string(va_list args)
 {
 	char *sval = va_arg(args, char *);
+
 	if (sval)
 		printf("%s", sval);
 	else
