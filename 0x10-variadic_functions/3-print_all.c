@@ -3,59 +3,77 @@
 #include <stdio.h>
 
 /**
- * print_all - prints anything
- * @format: format string containing types of arguments passed to the function
+ * print_char - Print a character from variadic arguments
+ * @args: The list of arguments
  */
+void print_char(va_list args)
+{
+	printf("%c", va_arg(args, int));
+}
 
+/**
+ * print_int - Print an integer from variadic arguments
+ * @args: The list of arguments
+ */
+void print_int(va_list args)
+{
+	printf("%d", va_arg(args, int));
+}
+
+/**
+ * print_float - Print a float from variadic arguments
+ * @args: The list of arguments
+ */
+void print_float(va_list args)
+{
+	printf("%f", va_arg(args, double));
+}
+
+/**
+ * print_string - Print a string from variadic arguments
+ * @args: The list of arguments
+ */
+void print_string(va_list args)
+{
+	char *str = va_arg(args, char *);
+
+	if (str == NULL)
+		printf("(nil)");
+	else
+		printf("%s", str);
+}
+
+/**
+ * print_all - Print anything from variadic arguments
+ * @format: The format string
+ */
 void print_all(const char * const format, ...)
 {
 	va_list args;
-	char *s;
-	int i = 0;
-	float f;
+	char *sep = "";
+	int i = 0, j = 0;
+	const char *fmt_spec = "cifs";
+
+	/* Define a function pointer table to map format specifiers to print functions */
+	void (*print_funcs[])(va_list) = {print_char, print_int, print_float, print_string};
 
 	va_start(args, format);
 
+	/* Iterate over the format string and print each corresponding argument */
 	while (format && format[i])
 	{
-		switch (format[i])
+		j = 0;
+		while (fmt_spec[j])
 		{
-			case 'c':
-				printf("%c", va_arg(args, int));
-				break;
-			case 'i':
-				printf("%d", va_arg(args, int));
-				break;
-			case 'f':
-				printf("%f", va_arg(args, double));
-				break;
-			case 's':
-				s = va_arg(args, char *);
-				if (s)
-					printf("%s", s);
-				else
-					printf("(nil)");
-				break;
-			default:
-				break;
-		}
-
-		if (format[i + 1])
-		{
-			switch (format[i])
+			if (format[i] == fmt_spec[j])
 			{
-				case 'c':
-				case 'i':
-				case 'f':
-				case 's':
-					if (format[i + 1] == 'c' || format[i + 1] == 'i' || format[i + 1] == 'f' || format[i + 1] == 's')
-						printf(",");
-					break;
-				default:
-					break;
+				printf("%s", sep);
+				print_funcs[j](args);
+				sep = ", ";
+				break;
 			}
+			j++;
 		}
-
 		i++;
 	}
 
